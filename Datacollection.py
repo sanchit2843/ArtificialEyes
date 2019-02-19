@@ -16,6 +16,7 @@ result = pd.read_csv('/content/flickr30k_images/results.csv',delimiter='|')
 #converting result into numpy array
 result = result.iloc[:,:].values
 
+
 from tqdm import tqdm
 result1 = list()
 for i in tqdm(range(len(result))):
