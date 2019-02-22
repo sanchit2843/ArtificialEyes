@@ -2,7 +2,7 @@
 import re
 from nltk.corpus import stopwords
 import Datacollection
-
+num_words = 10
 def cleantext(rev):
   rev = re.sub(r'[^a-zA-Z]',' ',rev)
   rev = rev.lower()
@@ -20,4 +20,5 @@ tokenizer = Tokenizer(num_words=max_features)
 tokenizer.fit_on_texts(result2[:,1])
 list_tokenized_train = tokenizer.texts_to_sequences(result2[:,1])
 num_words = len(tokenizer.word_index) + 1
+
 print(num_words)

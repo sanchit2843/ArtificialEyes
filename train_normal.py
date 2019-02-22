@@ -1,7 +1,15 @@
-total_step = len(data_loader)
 import os
+import Textpreprocessing
+from model import Decoder,Encoder
 import cv2
 from torch.nn.utils.rnn import pack_padded_sequence
+from dataloader import data_loader
+
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+encoder = Encoder().to(device)
+decoder = Decoder(num_words).to(device)
+total_step = len(data_loader)
+
 for epoch in range(10):
   for i, (images, captions, lengths) in enumerate(data_loader):
     images = images.to(device)

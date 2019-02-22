@@ -1,7 +1,8 @@
 #flickr dataset
-#import supportlib
-!pip install -i https://test.pypi.org/simple/ supportlib
-import supportlib.gettingdata as getdata
+
+# Uncomment two lines below if using jupyter notebook or install library from cmd and uncomment second comment
+#!pip install -i https://test.pypi.org/simple/ supportlib
+#import supportlib.gettingdata as getdata
 
 #Download data from kaggle
 getdata.kaggle() # Upload kaggle.json on google colab
