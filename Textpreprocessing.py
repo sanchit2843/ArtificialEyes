@@ -2,7 +2,6 @@
 import re
 from nltk.corpus import stopwords
 import Datacollection
-num_words = 10
 def cleantext(rev):
   rev = re.sub(r'[^a-zA-Z]',' ',rev)
   rev = rev.lower()
