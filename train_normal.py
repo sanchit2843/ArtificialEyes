@@ -22,7 +22,6 @@ for epoch in range(10):
     encoder.zero_grad()
     loss.backward()
     optimizer.step()
-    #torch.nn.utils.rnn.pad_packed_sequence(outputs,lengths, batch_first=True)[0]
     if i % 500 == 0:
       print('Epoch [{}/{}], Step [{}/{}], Loss: {:.4f}, Perplexity: {:5.4f}'.format(epoch, 10, i, total_step, loss.item(), np.exp(loss.item())))
     if i%5000==0:
