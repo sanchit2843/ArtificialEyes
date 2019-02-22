@@ -22,14 +22,14 @@ for epoch in range(10):
     encoder.zero_grad()
     loss.backward()
     optimizer.step()
-    if i % 500 == 0:
+    if i % 50 == 0:
       print('Epoch [{}/{}], Step [{}/{}], Loss: {:.4f}, Perplexity: {:5.4f}'.format(epoch, 10, i, total_step, loss.item(), np.exp(loss.item())))
-    if i%5000==0:
+    if i%500==0:
       outputs = outputs.cpu().detach().numpy()
       caption = []
       for i in range(len(outputs)):
         caption.append(np.argmax(outputs[i]))
-        #targets = targets.cpu().detach().numpy()
+
       sampled_caption = []
       for word_id in caption:
         word = reverse_word_map[int(word_id)]
