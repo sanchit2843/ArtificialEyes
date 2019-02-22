@@ -23,7 +23,7 @@ for epoch in range(10):
     loss.backward()
     optimizer.step()
     if i % 50 == 0:
-      print('Epoch [{}/{}], Step [{}/{}], Loss: {:.4f}, Perplexity: {:5.4f}'.format(epoch, 10, i, total_step, loss.item(), np.exp(loss.item())))
+      print('Epoch :{}, Loss: {:.4f}'.format(epoch ,  loss.item())
     if i%500==0:
       outputs = outputs.cpu().detach().numpy()
       caption = []
