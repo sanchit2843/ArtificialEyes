@@ -16,5 +16,5 @@ while True:  # making a loop
     try:  # used try so that if user pressed other than the given key error will not be shown
         if keyboard.is_pressed('q'):  # if key 'q' is pressed
             _, image = camera.read()
-            cv2.imwrite('image.jpg', image)
+            cv2.imwrite('./image.jpg', image)
             send_data_to_server('./image.jpg')
