@@ -8,6 +8,7 @@ import numpy as np
 import cv2
 import os
 #from skimage.transform import resize, pyramid_reduce
+#for hacktoberfest'19
 import PIL
 from PIL import Image
 import torch
